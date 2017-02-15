@@ -1,0 +1,22 @@
+{
+  "name": "tic-tac-toe-server",
+  "version": "1.0.01",
+  "private": true,
+  "description": "A tic-tac-toe server built with Swagger.",
+  "keywords": [],
+  "author": "Curtis Schlak <curtis.schlak@theironyard.com>",
+  "license": "MIT",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "swagger-express-mw": "^0.1.0"
+  },
+  "devDependencies": {
+    "should": "^7.1.0",
+    "supertest": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "swagger project test"
+  }
+}
