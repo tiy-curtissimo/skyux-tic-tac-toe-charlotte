@@ -13,7 +13,7 @@ export class TicTacToeGame {
     if (typeof titleOrState === 'string') {
       this.title = titleOrState;
     } else {
-      this.board = titleOrState.board;
+      this.board = titleOrState.board.map(b => b? b : NaN);
       this.firstPlayer = titleOrState.firstPlayer;
       this.gameOver = titleOrState.gameOver;
       this.title = titleOrState.title;
