@@ -1,15 +1,27 @@
 <div class="tic-tac-toe-lobby">
-  <div class="tic-tac-toe-list">
-    <input [(ngModel)]="title" type="text">
-    <button (click)="createGame(title)">Create a game</button>
-    <button (click)="saveAll()">Save them all</button>
-    <ul>
-      <li *ngFor="let game of games">
+  <div class="tic-tac-toe-list-holder">
+    <div class="tic-tac-toe-list-add-group">
+      <input [(ngModel)]="title"
+             (keydown.enter)="createGame(title)"
+             type="text"
+             placeholder="New game title">
+      <button (click)="createGame(title)" [disabled]="!title">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+    <button (click)="saveAll()" class="tic-tac-toe-list-saver">
+      <i class="fa fa-save"></i>
+      Save them all
+    </button>
+    <ul class="tic-tac-toe-list">
+      <li *ngFor="let game of games"
+          [ngClass]="{active: game === selectedGame}"
+          class="tic-tac-toe-list-item">
         <i class="fa fa-trash"
            (click)="deleteGame(game)"
            aria-hidden="true"></i>
-        <a (click)="selectGame(game)"
-          [ngClass]="{active: game === selectedGame}">{{ game.title }}</a>
+        <a (click)="selectGame(game)">{{ game.title }}</a>
+        <span *ngIf="game.gameOver">game over</span>
       </li>
     </ul>
   </div>

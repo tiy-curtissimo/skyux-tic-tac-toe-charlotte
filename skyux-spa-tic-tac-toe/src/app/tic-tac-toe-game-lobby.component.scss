@@ -1,16 +1,88 @@
+$border-color: lightgray;
+
 .tic-tac-toe-lobby {
   display: flex;
 }
 
+.tic-tac-toe-list-holder {
+  flex: 0 0 200px;
+}
+
+.tic-tac-toe-list-saver {
+  margin: 1em 0 0 0;
+  padding: 8px 0;
+  width: 100%;
+  background-color: palegreen;
+  border: 1px solid $border-color;
+  font-style: bold;
+}
+
+.tic-tac-toe-list-saver:active {
+  box-shadow: inset 0 0 4px $border-color;
+  background-color: lightgreen;
+}
+
 .tic-tac-toe-list {
-  flex: 0 0 150px;
+  margin: 0 0;
+  padding: 0;
+}
+
+.tic-tac-toe-list-item {
+  list-style: none;
+  margin: 0;
+  padding: 1em 1em;
+  background-color: white;
+  border: 1px solid $border-color;
+  border-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  i {
+    order: 1;
+    cursor: pointer;
+  }
+
+  a {
+    order: 0;
+    flex: 1 0 0px;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  span {
+    order: 2;
+    flex: 0 0 100%;
+    font-size: .8em;
+    font-style: italic;
+  }
+}
+
+.tic-tac-toe-list-add-group {
+  display: flex;
+  border: 1px solid $border-color;
+
+  input {
+    border: 0;
+    background-color: white;
+    padding: 8px 4px;
+  }
+
+  button {
+    border: 0;
+    background-color: white;
+    border-left: 1px solid $border-color;
+  }
 }
 
 .tic-tac-toe-board-holder {
   flex: 1 0 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .active {
   background-color: cornflowerblue;
   color: white;
 }
+

@@ -54,17 +54,17 @@ export class TicTacToeGame {
                  this.isWinningTriple(a, e, i) ||
                  this.isWinningTriple(c, e, g); 
     let cat = !isNaN(a + b + c + d + e + f + g + h + i);
-    if (winner) {
-      this.gameOver = { 
-        firstPlayerWon: this.firstPlayer,
-        secondPlayerWon: !this.firstPlayer
-      };
-    }
     if (cat) {
       this.gameOver = {
         firstPlayerWon: false,
         secondPlayerWon: false
       }
+    }
+    if (winner) {
+      this.gameOver = { 
+        firstPlayerWon: this.firstPlayer,
+        secondPlayerWon: !this.firstPlayer
+      };
     }
   }
 }

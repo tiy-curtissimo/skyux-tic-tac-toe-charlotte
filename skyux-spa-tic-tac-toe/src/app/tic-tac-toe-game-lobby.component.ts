@@ -34,12 +34,18 @@ export class TicTacToeGameLobbyComponent implements OnDestroy, OnInit {
   }
 
   createGame(title: string) {
-    let game = this.service.createGame(title);
-    this.selectedGame = game;
-    this.title = '';
+    if (title) {
+      let game = this.service.createGame(title);
+      this.selectedGame = game;
+      this.title = '';
+    }
   }
 
   selectGame(game: TicTacToeGame) {
-    this.selectedGame = game;
+    if (this.selectedGame === game) {
+      this.selectedGame = null;
+    } else {
+      this.selectedGame = game;
+    }
   }
 }
