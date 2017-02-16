@@ -1,6 +1,6 @@
 interface GameResult {
-  firstPlayerWon: boolean
-  secondPlayerWon: boolean
+  firstPlayerWon: boolean;
+  secondPlayerWon: boolean;
 }
 
 export class TicTacToeGame {
@@ -22,7 +22,7 @@ export class TicTacToeGame {
 
   get emptySquares(): number[] {
     return this.board
-      .map((v, i) => isNaN(v)? i : -1)
+      .map((v, i) => isNaN(v) ? i : -1)
       .filter(v => v >= 0);
   }
 
@@ -52,7 +52,7 @@ export class TicTacToeGame {
                  this.isWinningTriple(b, e, h) ||
                  this.isWinningTriple(c, f, i) ||
                  this.isWinningTriple(a, e, i) ||
-                 this.isWinningTriple(c, e, g); 
+                 this.isWinningTriple(c, e, g);
     let cat = !isNaN(a + b + c + d + e + f + g + h + i);
     if (cat) {
       this.gameOver = {
@@ -61,7 +61,7 @@ export class TicTacToeGame {
       }
     }
     if (winner) {
-      this.gameOver = { 
+      this.gameOver = {
         firstPlayerWon: this.firstPlayer,
         secondPlayerWon: !this.firstPlayer
       };
