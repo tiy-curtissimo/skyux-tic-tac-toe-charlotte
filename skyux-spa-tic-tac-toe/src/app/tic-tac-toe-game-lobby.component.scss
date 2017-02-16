@@ -1,0 +1,16 @@
+.tic-tac-toe-lobby {
+  display: flex;
+}
+
+.tic-tac-toe-list {
+  flex: 0 0 150px;
+}
+
+.tic-tac-toe-board-holder {
+  flex: 1 0 300px;
+}
+
+.active {
+  background-color: cornflowerblue;
+  color: white;
+}

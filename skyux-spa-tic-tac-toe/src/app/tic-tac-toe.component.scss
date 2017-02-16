@@ -1,0 +1,30 @@
+.tic-tac-toe-board {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tic-tac-toe-square {
+  font-size: 4em;
+  flex: 0 0 99px;
+  text-align: center;
+  background-color: palegoldenrod;
+  border: 1px solid rosybrown;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ttt-rb {
+  border-right: 1px solid rosybrown;
+}
+.ttt-bb {
+  border-bottom: 1px solid rosybrown;
+}
+.ttt-lb {
+  border-right: 1px solid rosybrown;
+}
+.ttt-tb {
+  border-bottom: 1px solid rosybrown;
+}

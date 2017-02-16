@@ -1,0 +1,14 @@
+<div class="tic-tac-toe-board">
+  <div *ngFor="let square of game.board; let i = index"
+       (click)="onClick(i)"
+       class="tic-tac-toe-square">
+        <div *ngIf="!square">&nbsp;</div>
+        <div *ngIf="square === 3">X</div>
+        <div *ngIf="square === 7">O</div>
+       </div>
+</div>
+<h1 *ngIf="game.gameOver">
+  GAME OVER!
+  <span *ngIf="game.gameOver.firstPlayerWon">X won</span>
+  <span *ngIf="game.gameOver.secondPlayerWon">O won</span>
+</h1>

@@ -14,6 +14,10 @@ export class AppNavComponent {
     {
       name: 'About',
       path: '/about'
+    },
+    {
+      name: 'Pet Store',
+      path: '/pets'
     }
   ];
 }
